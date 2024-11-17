@@ -1,0 +1,137 @@
+/*---------------------- 
+Reset
+---------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+	font-family: 'MontserratBlack';
+	src: url('../fonts/MontserratBlack.eot');
+	src: url('../fonts/MontserratBlack.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MontserratBlack.otf') format('opentype'),
+	url('../fonts/MontserratBlack.woff2') format('woff2'),
+	url('../fonts/MontserratBlack.woff') format('woff'),
+	url('../fonts/MontserratBlack.svg#MontserratBlack') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	font-size: 14px;
+	line-height: 1.42857143;
+	background: #f1f1fb;
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+body * {
+	box-sizing: border-box;
+	line-height: 1.42857143;
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-weight: 700;
+	line-height: 1.1;
+}
+i, em {
+	font-style: italic;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	text-decoration: none;
+}
+.h-logo{
+    width: 300px;
+    height: auto;
+}
+
+/* Header */
+
+
+
+.contenerdor-ico svg{
+    width: 25px;
+    height: auto;
+    padding: auto;
+    align-items: center;
+}
+
+.h-search-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.h-search-input{
+    border: none;
+    border-radius: 8px;
+    background-color: #f1f1fb;
+    border-radius: 8px;
+    padding-left: 15px;
+    height: 35px;
+    width: auto;
+}   
+
+.tarjeta{
+	border-radius: 1px;
+	width: 25%;
+	height: auto;
+	background-color: white;
+}
+
+.botones svg{
+	width: 35px;
+	height: auto;
+}
+.container-site{
+	min-height: 100dvh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+

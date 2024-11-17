@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="row m-5">
+            <div class="col-sm-9 mb-3 mb-sm-0 ">
+                <div class="card d-flex flex-row">
+                    <div class="card-body">
+                    <h5 class="card-title fs-4">Carrito de compras</h5><br>
+                    <img src="{% static 'img/photo200.png' %}" alt="imagen del producto" class="p-3">
+                    </div>
+                    <div class="producto d-flex align-items-center text">
+                        <ul>
+                            <li><p class="fs-5 m-1">Nombre del producto</p></li>
+                            <li><p class="fs-6 m-1">Precio</p></li>
+                            <li><p class="fs-6 m-1">Cantidad</p></li>
+                            <li><a href="" class="m-1 f-7">Eliminar</a></li>
+                            <li><a href="" class="m-1 f-7">Volver a la pagina de compras</a></li>
+                        </ul>
+                    </div>
+                    <div class="fs-5 d-flex align-items-end p-5">
+                        <h1 class="">Subtotal $0.000</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            <div class="card text-center">
+                <div class="card-body m-2">
+                <h5 class="card-title fs-4 text-center p-2">Pago</h5>
+                <p class="text-center fs-6 p-2">Total $0.000</p>
+                <button type="submit" class="btn btn-danger mt-3 btn-sm">Hacer el pago</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

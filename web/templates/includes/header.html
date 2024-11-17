@@ -1,0 +1,99 @@
+{% load static %}
+    <!--header-->
+    <div class="top-header bg-white d-flex flex-row text-center px-4 d-flex align-items-center align-content-between">
+
+        <p class="h-logo">
+            <a href="/"><img src="{% static 'img/logo.jpg' %}" alt="UrbaKet Store"></a>
+        </p><!--
+    No Space
+    --><div class="h-shop d-flex flex-row text-center align-items-center align-content-between">
+        <ul class="px-4 text-center">
+            <li>
+                <a href="#">Direccion</a>
+            </li>
+        </ul>
+        <ul class="px-4 text-center">
+            <li>
+                <a href="{% url 'web:productolis' %}">Productos</a>
+            </li>
+        </ul>
+        <form method="post" action="#" class="h-search" id="h-search">
+            {% csrf_token %}
+            <input type="text" name="nombre" class="h-search-input" placeholder="Search...">
+            <button type="submit" class="h-search-btn"><i class="bi bi-search"></i></button>
+        </form>
+        {% if user.is_authenticated %}
+            <ul class="h-shop-links px-4 text-center ">
+                <li class="h-search-btn" id="h-search-btn"></li>
+                <li class="h-shop-icon h-profile">
+                    <a href="auth.html" title="My Account">
+                        <i class="ion-android-person"></i>
+                    </a>
+                    <ul class="px-4 text-center"">
+                        <li><a href="{% url 'web:logout' %}">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        {% else %}
+        <ul class="h-shop-links px-4 text-center ">
+            <li class="h-search-btn" id="h-search-btn"></li>
+            <li class="h-shop-icon h-profile">
+                <a href="auth.html" title="My Account">
+                    <i class="ion-android-person"></i>
+                </a>
+                <ul class="px-4 text-center"">
+                    <li><a href="/login">Ingresar</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="h-shop-links px-4 text-center ">
+            <li class="h-search-btn" id="h-search-btn"></li>
+            <li class="h-shop-icon h-profile">
+                <a href="auth.html" title="My Account">
+                    <i class="ion-android-person"></i>
+                </a>
+                <ul class="px-4 text-center"">
+                    <li><a href="{% url 'web:register' %}">Registrarse</a></li>
+                </ul>
+            </li>
+        </ul>
+        {% endif %}
+
+        
+        {% if user.is_authenticated %}
+        <ul class="px-4 text-center">
+            <li>
+                <a href="{% url 'web:ordenes' %}">Ordenes</a>
+            </li>
+        </ul>
+        <ul class="p-4 text-center">
+            <li>
+                <a href="{% url 'cart:cart_summary' %}">
+                    <div class="contenerdor-ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-inbox" viewBox="0 0 16 16">
+                        <path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm9.954 5H10.45a2.5 2.5 0 0 1-4.9 0H1.066l.32 2.562a.5.5 0 0 0 .497.438h12.234a.5.5 0 0 0 .496-.438zM3.809 3.563A1.5 1.5 0 0 1 4.981 3h6.038a1.5 1.5 0 0 1 1.172.563l3.7 4.625a.5.5 0 0 1 .105.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374z"/>
+                        </svg>
+                    </div>
+                </i>0</a>
+            </li>
+        </ul>
+        {% else %}
+        <ul class="px-4 text-center">
+            <li>
+                <a href="{% url 'web:login' %}">Ordenes</a>
+            </li>
+        </ul>
+        <ul class="p-4 text-center">
+            <li>
+                <a href="{% url 'cart:cart_summary' %}">
+                    <div class="contenerdor-ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-inbox" viewBox="0 0 16 16">
+                        <path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm9.954 5H10.45a2.5 2.5 0 0 1-4.9 0H1.066l.32 2.562a.5.5 0 0 0 .497.438h12.234a.5.5 0 0 0 .496-.438zM3.809 3.563A1.5 1.5 0 0 1 4.981 3h6.038a1.5 1.5 0 0 1 1.172.563l3.7 4.625a.5.5 0 0 1 .105.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374z"/>
+                        </svg>
+                    </div>
+                </i></a>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+</div>

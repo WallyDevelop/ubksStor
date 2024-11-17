@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 pb-5">
+    <h1 class="fs-3">Ordenes</h1>
+    <div class="card text-center mt-2">
+        <div class="card-header row">
+          <div class="col-md-3">
+            <h1>ORDEN REALIZADA</h1>
+            <P>MM/DD/AAAA</P>
+          </div>
+          <div class="col-md-3">
+            <h1>TOTAL</h1>
+            <p>$ 0.000</p>
+          </div>
+          <div class="col-md-3">
+            <h1>ENVIADO A</h1>
+            <p>Nombre del Cliente</p>
+          </div>
+          <div class="col-md-3">
+            <h1>NUMERO DE ORDEN</h1>
+            <p># ub-000-000-000</p>
+          </div>
+        </div>
+        <div class="card-body row">
+            <div class="col-md-4">
+                <img src="{% static 'img/photo140.png' %}" style="width: 140px; height: 140px;" alt="">
+            </div>
+            <div class="col-md-8 text-start mt-3">
+                <h1>Nombre del producto</h1><br>
+                <a href="" class="btn btn-primary me-4">Comprar otravez</a>
+                <a href="" class="btn btn-danger">Ver Producto</a>
+            </div>
+
+        </div>
+        <div class="card-footer text-body-secondary">
+        </div>
+      </div>
+</div>
+{% endblock %}
